@@ -15,7 +15,7 @@
         <button (click)='getPokemon()'>Search</button><br>
     </form>
 
-    <div *ngIf = 'showDiv'>
+    <div *ngIf="pokemon && pokemon.sprites">
         <div id="pokedex">
             <div id="left">
                 <div id="logo"></div>
