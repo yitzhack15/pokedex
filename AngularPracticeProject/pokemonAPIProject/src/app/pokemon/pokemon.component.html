@@ -15,7 +15,7 @@
         <button (click)='getPokemon()'>Search</button><br>
     </form>
 
-    <div>
+    <div *ngIf = 'showDiv'>
         <div id="pokedex">
             <div id="left">
                 <div id="logo"></div>
@@ -40,7 +40,7 @@
                         <div id="buttontopPicture1"></div>
                         <div id="buttontopPicture2"></div>
                     </div>
-                    <div id="picture">
+                    <div id="picture" *ngIf="pokemon && pokemon.sprites">
                         <img src="{{pokemon.sprites.front_default}}" height="170" />
                     </div>
                     <div id="buttonbottomPicture"></div>
